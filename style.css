@@ -308,6 +308,75 @@ nav a {
     }
 
 }
+/* ======================
+   DETAIL PAGE RESPONSIVE
+====================== */
+
+.detail-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.detail-section h1 {
+    margin-bottom: 40px;
+}
+
+.detail-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-section .detail-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.detail-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.detail-card h3 {
+    margin: 15px 0 5px;
+}
+
+.detail-card p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.detail-card:hover {
+    transform: translateY(-8px);
+}
+.detail-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+.property-options {
+    padding: 60px 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+header {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+}
+
 /* =====================
    MODERN CLEAN FOOTER
 ===================== */
