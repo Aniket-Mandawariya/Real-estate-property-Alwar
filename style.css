@@ -308,122 +308,132 @@ nav a {
     }
 
 }
-/* =========================
-   PROPERTIES PAGE STYLING
-========================= */
+/* =========================================
+   PROPERTY PAGE STYLES
+========================================= */
 
-/* Hero Section */
+/* HERO */
 .property-hero {
-    height: 35vh;
-    background: #222;
-    color: #fff;
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1568605114967-8130f3a36994');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
     padding: 20px;
 }
 
 .property-hero h1 {
-    font-size: 36px;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-/* Property Options Grid */
-.property-options {
-    padding: 60px 8%;
+.property-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* SECTION */
+.property-section {
+    padding: 80px 8%;
+    background: #f5f7fa;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+/* GRID */
+.property-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
-/* Option Card */
-.option-card {
+/* CARD */
+.property-card {
+    height: 260px;
+    border-radius: 18px;
     position: relative;
-    height: 220px;
-    border-radius: 15px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    padding: 25px;
     text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    background-size: cover;
-    background-position: center;
+    color: white;
     overflow: hidden;
     transition: 0.4s ease;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Dark overlay */
-.option-card::before {
+.property-card::before {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
-    transition: 0.3s ease;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+    transition: 0.4s;
 }
 
-.option-card h2 {
-    position: relative;
-    z-index: 1;
+.property-card:hover {
+    transform: translateY(-10px);
 }
 
-/* Hover Effect */
-.option-card:hover {
-    transform: translateY(-8px) scale(1.03);
+.property-card:hover::before {
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
 }
 
-.option-card:hover::before {
-    background: rgba(0,0,0,0.35);
+.property-card h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
 }
 
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
+.property-card p {
+    font-size: 14px;
+    opacity: 0.9;
+}
 
-/* Large Tablets */
+/* BACKGROUND IMAGES */
+.land {
+    background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef');
+}
+
+.own {
+    background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be');
+}
+
+.rent-house {
+    background-image: url('https://images.unsplash.com/photo-1560184897-ae75f418493e');
+}
+
+.rent-land {
+    background-image: url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae');
+}
+
+/* RESPONSIVE */
 @media (max-width: 1024px) {
-    .property-options {
+    .property-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .property-hero h1 {
-        font-size: 30px;
-    }
 }
 
-/* Mobile Devices */
 @media (max-width: 768px) {
-
-    .property-options {
+    .property-grid {
         grid-template-columns: 1fr;
-        padding: 40px 5%;
-    }
-
-    .option-card {
-        height: 200px;
-    }
-
-    .property-hero {
-        height: 30vh;
     }
 
     .property-hero h1 {
+        font-size: 28px;
+    }
+
+    .section-title {
         font-size: 24px;
-    }
-}
-
-/* Small Mobile */
-@media (max-width: 480px) {
-
-    .option-card {
-        height: 180px;
-        font-size: 18px;
-    }
-
-    .property-hero h1 {
-        font-size: 20px;
     }
 }
 /* =====================
