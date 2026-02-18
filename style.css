@@ -461,6 +461,83 @@ nav a {
         font-size: 24px;
     }
 }
+/* ===== LAND PAGE RESPONSIVE DESIGN ===== */
+
+/* Container */
+.land-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:60px 0;
+}
+
+/* Grid Layout */
+.land-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* Card */
+.land-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s ease;
+    text-align:center;
+}
+
+.land-card:hover{
+    transform:translateY(-8px);
+}
+
+/* Image */
+.land-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* Text */
+.land-card h3{
+    font-size:20px;
+    margin:15px 0 5px;
+}
+
+.land-card p{
+    font-size:16px;
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablet */
+@media(max-width:1024px){
+    .land-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .land-grid{
+        grid-template-columns:1fr;
+    }
+
+    .land-card img{
+        height:180px;
+    }
+
+    .land-card h3{
+        font-size:18px;
+    }
+
+    .land-card p{
+        font-size:14px;
+    }
+}
 /* =====================
    MODERN CLEAN FOOTER
 ===================== */
