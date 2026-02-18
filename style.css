@@ -461,6 +461,29 @@ nav a {
         font-size: 24px;
     }
 }
+/* ===== LAND PAGE RESPONSIVE CSS ===== */
+
+img{max-width:100%;height:auto;display:block;}
+
+.land-container{width:90%;max-width:1200px;margin:auto;}
+
+.land-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+
+.land-section{display:flex;gap:30px;}
+
+button{width:100%;max-width:300px;}
+
+@media(max-width:1024px){
+.land-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:768px){
+.land-grid{grid-template-columns:1fr;}
+.land-section{flex-direction:column;}
+h1{font-size:28px;}
+h2{font-size:22px;}
+p{font-size:14px;}
+}
 /* =====================
    MODERN CLEAN FOOTER
 ===================== */
