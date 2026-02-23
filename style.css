@@ -4,15 +4,15 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+.header {
+    background: #111;
+}
 body {
     background: #f4f4f4;
     body {
     overflow-x: hidden;  /* Prevent horizontal scroll */
     margin: 0;
 }
-}
-.header h1 {
-    background-color: #00bcd4;
 }
 /* NAVBAR */
 .navbar {
@@ -354,7 +354,7 @@ color:white;
 .logo{color:white;}
 
 .nav-links a{
-color:rgb(28, 18, 18);
+color:white;
 margin-left:20px;
 text-decoration:none;
 }
