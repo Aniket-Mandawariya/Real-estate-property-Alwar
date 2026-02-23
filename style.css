@@ -5,7 +5,8 @@
     font-family: Arial, sans-serif;
 }
 .header {
-    background: #111;
+    background: #f8f9fa;
+    color: black;
 }
 body {
     background: #f4f4f4;
@@ -24,7 +25,9 @@ body {
     color: white;
     position: relative;
 }
-
+.nav a {
+    color: black;
+}
 .logo {
     font-size: 22px;
     font-weight: bold;
