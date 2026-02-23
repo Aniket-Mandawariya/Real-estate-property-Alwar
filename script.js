@@ -73,3 +73,9 @@ Product Link: ${productLink}`;
         window.open(`https://wa.me/919460006458?text=${encodedMessage}`, "_blank");
     };
 });
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector(".nav");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
