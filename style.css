@@ -12,43 +12,64 @@ body {
     margin: 0;
 }
 }
+/* =========================
+   MODERN RESPONSIVE NAVBAR
+========================= */
 
-/* NAVBAR */
-.navbar {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 8%;
+    padding: 18px 8%;
     background: #111;
     color: white;
-    position: relative;
-}
-.nav a{
-    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+/* Logo */
 .logo {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
+    color: #ffffff;
 }
 
-.nav-links {
-    list-style: none;
+/* Navigation Links */
+.nav {
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
-.nav-links li a {
+.nav a {
     text-decoration: none;
     color: white;
+    font-size: 16px;
+    position: relative;
     transition: 0.3s;
 }
 
-.nav-links li a:hover {
+/* Hover underline effect */
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #00bcd4;
+    transition: 0.3s;
+}
+
+.nav a:hover {
     color: #00bcd4;
 }
 
-/* Hide toggle button on desktop */
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -56,33 +77,30 @@ body {
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
 
-    .nav-links {
+    .nav {
         position: absolute;
-        top: 60px;
+        top: 70px;
         right: 0;
         background: #111;
         width: 100%;
         flex-direction: column;
-        text-align: center;
-        display: none;
+        align-items: center;
+        gap: 20px;
         padding: 20px 0;
+        display: none;
     }
 
-    .nav-links li {
-        margin: 15px 0;
+    .nav.active {
+        display: flex;
     }
 
     .menu-toggle {
         display: block;
-    }
-
-    .nav-links.active {
-        display: flex;
     }
 }
 /* MODAL BACKGROUND */
