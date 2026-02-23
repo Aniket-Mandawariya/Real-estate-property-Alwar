@@ -23,6 +23,9 @@ body {
     color: white;
     position: relative;
 }
+.nav a{
+    color: white;
+}
 
 .logo {
     font-size: 22px;
