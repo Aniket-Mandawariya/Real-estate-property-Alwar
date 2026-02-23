@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const message = `Hello, I am interested in this property:
 
-Property: ${selectedProduct}
-Product Link: ${productLink}`;
+        Property: ${selectedProduct}
+        Product Link: ${productLink}`;
 
         const encodedMessage = encodeURIComponent(message);
 
