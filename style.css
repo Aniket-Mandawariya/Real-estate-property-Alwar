@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
 body {
     background: #f4f4f4;
     body {
@@ -12,64 +11,42 @@ body {
     margin: 0;
 }
 }
-/* =========================
-   MODERN RESPONSIVE NAVBAR
-========================= */
-
-.header {
+.header{
+    
+}
+/* NAVBAR */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 8%;
+    padding: 15px 8%;
     background: #111;
     color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: relative;
 }
 
-/* Logo */
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    color: #ffffff;
 }
 
-/* Navigation Links */
-.nav {
+.nav-links {
+    list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
-.nav a {
+.nav-links li a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
-    position: relative;
     transition: 0.3s;
 }
 
-/* Hover underline effect */
-.nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0%;
-    height: 2px;
-    background: #00bcd4;
-    transition: 0.3s;
+.nav-links li a:hover {
+    color: #00bcd4;
 }
 
-.nav a:hover {
-    color: #ffffff;
-}
-
-.nav a:hover::after {
-    width: 100%;
-}
-
-/* Mobile Menu Toggle */
+/* Hide toggle button on desktop */
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -77,30 +54,33 @@ body {
 }
 
 /* =========================
-   RESPONSIVE
+   MOBILE RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
 
-    .nav {
+    .nav-links {
         position: absolute;
-        top: 70px;
+        top: 60px;
         right: 0;
         background: #111;
         width: 100%;
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px 0;
+        text-align: center;
         display: none;
+        padding: 20px 0;
     }
 
-    .nav.active {
-        display: flex;
+    .nav-links li {
+        margin: 15px 0;
     }
 
     .menu-toggle {
         display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 }
 /* MODAL BACKGROUND */
@@ -374,7 +354,7 @@ color:white;
 .logo{color:white;}
 
 .nav-links a{
-color:white;
+color:rgb(10, 7, 7);
 margin-left:20px;
 text-decoration:none;
 }
