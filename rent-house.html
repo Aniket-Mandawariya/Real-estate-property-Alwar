@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rent House</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
 <body>
 
@@ -23,27 +24,41 @@
 <section class="grid-section">
     <div class="grid property-list">
 
-        <div class="property-item">
+        <div class="property-item" onclick="openModal('Rent house')">
             <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
-            <h3>Premium Plot</h3>
+            <h3>Rent house</h3>
             <p>$20,000</p>
         </div>
 
-        <div class="property-item">
+        <div class="property-item" onclick="openModal('Rent floor')">
             <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
-            <h3>Commercial Land</h3>
+            <h3>Rent floor</h3>
             <p>$35,000</p>
         </div>
 
-        <div class="property-item">
+        <div class="property-item" onclick="openModal('Rent store')">
             <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
-            <h3>Farm Land</h3>
+            <h3>Rent store</h3>
             <p>$15,000</p>
         </div>
 
     </div>
 </section>
+<!-- CONTACT MODAL -->
+<div class="property-modal" id="propertyModal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Contact Options</h3>
 
+        <button class="contact-btn">Contact</button>
+        <button class="whatsapp-btn">WhatsApp</button>
+
+        <div class="contact-info" id="contactInfo">
+            📞 +91 7891441441 <br>
+            📞 +91 9460006458
+        </div>
+    </div>
+</div>
 <footer>© 2026 DreamEstate</footer>
 
 </body>

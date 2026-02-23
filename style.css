@@ -13,21 +13,135 @@ body {
 }
 }
 
-/* Navbar */
-header {
+/* NAVBAR */
+.navbar {
     display: flex;
     justify-content: space-between;
-    padding: 15px 50px;
+    align-items: center;
+    padding: 15px 8%;
     background: #111;
     color: white;
+    position: relative;
 }
 
-nav a {
-    color: white;
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
     text-decoration: none;
-    margin-left: 10px;
+    color: white;
+    transition: 0.3s;
 }
 
+.nav-links li a:hover {
+    color: #00bcd4;
+}
+
+/* Hide toggle button on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #111;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+        padding: 20px 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+/* MODAL BACKGROUND */
+.property-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* MODAL BOX */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-btn {
+    background: #00bcd4;
+    color: white;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+}
+
+.contact-info {
+    display: none;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
 /* Hero */
 .hero {
     width: 100%;
