@@ -11,8 +11,8 @@ body {
     margin: 0;
 }
 }
-.header{
-    
+.header h1 {
+    background-color: #00bcd4;
 }
 /* NAVBAR */
 .navbar {
@@ -354,7 +354,7 @@ color:white;
 .logo{color:white;}
 
 .nav-links a{
-color:rgb(10, 7, 7);
+color:rgb(28, 18, 18);
 margin-left:20px;
 text-decoration:none;
 }
